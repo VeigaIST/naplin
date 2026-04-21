@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Participant {
+  id               String   @id @default(cuid())
+  code             String   @unique
+  name             String?
+  accessToken      String   @unique
+  pinHash          String?
+  active           Boolean  @default(true)
+  /** light | dark | system */
+  themePreference  String   @default("system")
+  createdAt        DateTime @default(now())
+  logs             Log[]
+}
+
+model Log {
+  id            String      @id @default(cuid())
+  participantId String
+  participant   Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  kind          String
+  payload       Json
+  at            DateTime
+  createdAt     DateTime    @default(now())
+
+  @@index([participantId])
+  @@index([kind])
+}

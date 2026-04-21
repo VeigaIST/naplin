@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="naplinBg" x1="16" y1="8" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3c5ef5"/>
+      <stop offset="1" stop-color="#2438c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#naplinBg)"/>
+  <path d="M42 20a16 16 0 1 0 0 24 12 12 0 1 1 0-24z" fill="#FFFFFF"/>
+  <path d="M12 50h40" stroke="#b8c9ff" stroke-width="3" stroke-linecap="round"/>
+</svg>

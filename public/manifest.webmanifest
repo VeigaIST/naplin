@@ -1,0 +1,18 @@
+{
+  "name": "naplin — estudos de sono",
+  "short_name": "naplin",
+  "description": "Diário de sono, humor, eventos e testes cognitivos para estudos com actígrafos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080b14",
+  "theme_color": "#080b14",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
