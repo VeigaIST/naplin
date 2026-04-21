@@ -8,5 +8,8 @@ dist/
 *.db-journal
 .DS_Store
 *.log
+tsconfig.tsbuildinfo
 .vercel
 .turbo
+.env*.local
+.env.production.pull

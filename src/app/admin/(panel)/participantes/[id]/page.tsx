@@ -25,6 +25,7 @@ export default async function AdminParticipantDetailPage({
 
   const appBase =
     process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
     "http://localhost:3030";
   const magicLink = `${appBase}/p/${p.accessToken}`;
 
